@@ -74,7 +74,6 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
-  min-height: 100vh;
   padding: 2rem 9%;
 }
 .heading {
@@ -91,6 +90,8 @@ header .logo {
   font-weight: 800;
   text-decoration: none;
   color: #0e2431;
+  display: flex;
+  align-items: center;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -117,8 +118,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
-  border-bottom: 0.2rem solid #011aff;
+  color: rgb(187, 22, 22);
+  border-bottom: 0.2rem solid rgb(213, 19, 19);
   padding: 0.5rem 0;
 }
 /* navbar ends */
@@ -186,6 +187,10 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+  background-image: url(https://cdn.dribbble.com/users/1100256/screenshots/7124464/media/94a5e074f80ae9466705cf4c833c3432.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .home #particles-js {
   position: absolute;
@@ -236,10 +241,88 @@ header .navbar ul li a:hover {
     color: #002057;
   }
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%,  rgb(213, 19, 19) 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+.services p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color:  rgb(213, 19, 19);;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color:  rgb(213, 19, 19);;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  .services {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #ff7b00;
+  color: rgb(196, 27, 27);
 }
 .home .content p {
   font-size: 2.5rem;
@@ -249,7 +332,14 @@ header .navbar ul li a:hover {
 }
 .home .content p span {
   font-size: 2.5rem;
-  color: rgb(148, 8, 8);
+  color: rgb(187, 22, 22);
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.typing-text2{
+  font-size: 2rem;
+  color: rgb(187, 22, 22);
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -261,8 +351,8 @@ header .navbar ul li a:hover {
   border-radius: 4em;
   transition: 0.5s;
   color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+  background: rgb(187, 22, 22);
+  box-shadow: 0px 5px 18px rgb(162, 18, 18);
   font-family: "Nunito", sans-serif;
 }
 .home .btn span {
@@ -420,6 +510,12 @@ header .navbar ul li a:hover {
   text-align: center;
   flex: 1 1 35rem;
 }
+
+.about span {
+  color:  rgb(193, 41, 41);
+  font-weight: 600;
+  padding: 1rem 0;
+}
 .about .row .image img {
   margin: 5rem;
   width: 40rem;
@@ -476,9 +572,10 @@ header .navbar ul li a:hover {
   padding: 1.7rem 3rem;
   border-radius: 0.5em;
   transition: 0.3s;
+  font-size: 1.5rem;
   color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: rgb(193, 41, 41);
+  box-shadow: 0px 5px 10px rgba(185, 17, 17, 0.6);
   font-family: "Nunito", sans-serif;
 }
 .resumebtn .btn span {
@@ -524,7 +621,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  background: linear-gradient(to bottom, #FF3366, #FF0033);
 }
 .skills h2 {
   color: #fff;
